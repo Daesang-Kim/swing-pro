@@ -32,6 +32,19 @@ open SwingPro.xcodeproj
 Xcode에서 `SwingPro` 스킴으로 빌드/실행, `SwingProTests` 스킴으로 유닛 테스트를 실행한다.
 카메라·Vision·ARKit 관련 기능은 시뮬레이터에서 동작하지 않으므로 실기기 테스트가 필요하다.
 
+## 코드 서명 (Apple Developer Program)
+
+`project.yml`의 `settings.base`에 `DEVELOPMENT_TEAM`과 `CODE_SIGN_STYLE: Automatic`이 이미
+설정되어 있어, 아래 조건만 맞으면 별도 프로비저닝 프로파일 없이 자동 서명된다.
+
+1. Xcode → Settings → Accounts에 해당 팀의 Apple ID로 로그인되어 있을 것
+2. 실기기로 빌드 시 그 기기가 팀에 등록되어 있을 것 (Xcode가 최초 빌드 시 자동 등록 시도)
+
+`PRODUCT_BUNDLE_IDENTIFIER`(`com.swingpro.app`)는 임시 placeholder다. 번들 ID는 Apple 전체에서
+유일해야 하므로, 실제로 이 팀 계정에서 처음 빌드할 때 이미 다른 개발자가 선점한 상태라면
+`project.yml`의 `PRODUCT_BUNDLE_IDENTIFIER` 값을 계정 소유 도메인 기반(예: `com.<yourname>.swingpro`)
+으로 바꾸고 `xcodegen generate`를 다시 실행해야 한다.
+
 ## 폴더 구조
 
 ```

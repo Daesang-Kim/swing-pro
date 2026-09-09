@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23605" systemVersion="24A335" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="NO" userDefinedModelVersionIdentifier="">
+    <entity name="CDUser" representedClassName="CDUser" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="nickname" optional="YES" attributeType="String"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="autoSaveMode" optional="YES" attributeType="String" defaultValueString="auto"/>
+        <attribute name="cameraViewMode" optional="YES" attributeType="String" defaultValueString="auto"/>
+        <relationship name="sessions" toMany="YES" deletionRule="Cascade" destinationEntity="CDSession" inverseName="user" inverseEntity="CDSession"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="CDSession" representedClassName="CDSession" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="mode" optional="YES" attributeType="String"/>
+        <attribute name="courseName" optional="YES" attributeType="String"/>
+        <attribute name="startedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="endedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="user" maxCount="1" deletionRule="Nullify" destinationEntity="CDUser" inverseName="sessions" inverseEntity="CDUser"/>
+        <relationship name="clips" toMany="YES" deletionRule="Cascade" destinationEntity="CDSwingClip" inverseName="session" inverseEntity="CDSwingClip"/>
+        <relationship name="puttingMeasurements" toMany="YES" deletionRule="Cascade" destinationEntity="CDPuttingMeasurement" inverseName="session" inverseEntity="CDPuttingMeasurement"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="CDSwingClip" representedClassName="CDSwingClip" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="recordedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="videoPath" optional="YES" attributeType="String"/>
+        <attribute name="durationSec" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="clubTag" optional="YES" attributeType="String"/>
+        <attribute name="shotType" optional="YES" attributeType="String"/>
+        <attribute name="cameraView" optional="YES" attributeType="String"/>
+        <attribute name="cameraViewSource" optional="YES" attributeType="String"/>
+        <attribute name="score" optional="YES" attributeType="Integer 16" usesScalarValueType="NO"/>
+        <relationship name="session" maxCount="1" deletionRule="Nullify" destinationEntity="CDSession" inverseName="clips" inverseEntity="CDSession"/>
+        <relationship name="poseSegments" toMany="YES" deletionRule="Cascade" destinationEntity="CDPoseSegment" inverseName="clip" inverseEntity="CDPoseSegment"/>
+        <relationship name="feedbacks" toMany="YES" deletionRule="Cascade" destinationEntity="CDSwingFeedback" inverseName="clip" inverseEntity="CDSwingFeedback"/>
+        <relationship name="trajectory" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CDBallTrajectory" inverseName="clip" inverseEntity="CDBallTrajectory"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="CDSwingReferenceRange" representedClassName="CDSwingReferenceRange" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="shotType" optional="YES" attributeType="String"/>
+        <attribute name="cameraView" optional="YES" attributeType="String"/>
+        <attribute name="segmentType" optional="YES" attributeType="String"/>
+        <attribute name="metricName" optional="YES" attributeType="String"/>
+        <attribute name="idealMin" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="idealMax" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="CDPoseSegment" representedClassName="CDPoseSegment" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="segmentType" optional="YES" attributeType="String"/>
+        <attribute name="timestampInVideo" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="angleSummaryJSON" optional="YES" attributeType="String"/>
+        <relationship name="clip" maxCount="1" deletionRule="Nullify" destinationEntity="CDSwingClip" inverseName="poseSegments" inverseEntity="CDSwingClip"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="CDSwingFeedback" representedClassName="CDSwingFeedback" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="deviationItem" optional="YES" attributeType="String"/>
+        <attribute name="message" optional="YES" attributeType="String"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="clip" maxCount="1" deletionRule="Nullify" destinationEntity="CDSwingClip" inverseName="feedbacks" inverseEntity="CDSwingClip"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="CDPuttingMeasurement" representedClassName="CDPuttingMeasurement" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="measuredAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="distanceM" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="session" maxCount="1" deletionRule="Nullify" destinationEntity="CDSession" inverseName="puttingMeasurements" inverseEntity="CDSession"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="CDBallTrajectory" representedClassName="CDBallTrajectory" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="detectedPointsJSON" optional="YES" attributeType="String"/>
+        <attribute name="detectionEndPointJSON" optional="YES" attributeType="String"/>
+        <relationship name="clip" maxCount="1" deletionRule="Nullify" destinationEntity="CDSwingClip" inverseName="trajectory" inverseEntity="CDSwingClip"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="CDUser" positionX="-620" positionY="-360" width="128" height="104"/>
+        <element name="CDSession" positionX="-380" positionY="-360" width="128" height="134"/>
+        <element name="CDSwingClip" positionX="-120" positionY="-380" width="128" height="209"/>
+        <element name="CDSwingReferenceRange" positionX="140" positionY="-560" width="128" height="134"/>
+        <element name="CDPoseSegment" positionX="140" positionY="-380" width="128" height="104"/>
+        <element name="CDSwingFeedback" positionX="140" positionY="-200" width="128" height="104"/>
+        <element name="CDPuttingMeasurement" positionX="-380" positionY="-180" width="128" height="89"/>
+        <element name="CDBallTrajectory" positionX="140" positionY="-40" width="128" height="89"/>
+    </elements>
+</model>

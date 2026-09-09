@@ -1,0 +1,61 @@
+name: SwingPro
+options:
+  bundleIdPrefix: com.swingpro
+  deploymentTarget:
+    iOS: "16.0"
+  createIntermediateGroups: true
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+
+targets:
+  SwingPro:
+    type: application
+    platform: iOS
+    sources:
+      - path: SwingPro
+    info:
+      path: SwingPro/Resources/Info.plist
+      properties:
+        UILaunchScreen: {}
+        NSCameraUsageDescription: "스윙을 자동으로 인식하고 촬영하기 위해 카메라 접근 권한이 필요합니다."
+        NSMicrophoneUsageDescription: "촬영되는 스윙 영상에 소리를 함께 기록하기 위해 마이크 접근 권한이 필요합니다."
+        NSPhotoLibraryAddUsageDescription: "촬영된 스윙 클립을 사진 라이브러리에 저장하기 위해 접근 권한이 필요합니다."
+        NSPhotoLibraryUsageDescription: "저장된 스윙 클립을 불러와 재생하기 위해 사진 라이브러리 접근 권한이 필요합니다."
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        ITSAppUsesNonExemptEncryption: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.swingpro.app
+        TARGETED_DEVICE_FAMILY: "1"
+        ENABLE_PREVIEWS: true
+        SWIFT_EMIT_LOC_STRINGS: true
+    dependencies: []
+
+  SwingProTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: SwingProTests
+    dependencies:
+      - target: SwingPro
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.swingpro.app.tests
+
+schemes:
+  SwingPro:
+    build:
+      targets:
+        SwingPro: all
+        SwingProTests: [test]
+    test:
+      targets:
+        - SwingProTests
+    run:
+      config: Debug

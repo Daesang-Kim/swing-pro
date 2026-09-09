@@ -1,0 +1,1082 @@
+[
+  {
+    "id": "5235f5cc-e084-40bb-b799-e566c17129ab",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p1",
+    "metricName": "shoulder_rotation",
+    "idealMin": 0,
+    "idealMax": 8
+  },
+  {
+    "id": "66c47830-b468-4fad-8ef5-0e6cd389a563",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p1",
+    "metricName": "shoulder_rotation",
+    "idealMin": 0.0,
+    "idealMax": 5.6
+  },
+  {
+    "id": "b1e7e65d-7149-4b4a-8f81-542f20a3c2ce",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p1",
+    "metricName": "shoulder_rotation",
+    "idealMin": 0,
+    "idealMax": 8
+  },
+  {
+    "id": "6db948d5-ab28-43a6-8420-ea66e807774b",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p1",
+    "metricName": "shoulder_rotation",
+    "idealMin": 0.0,
+    "idealMax": 5.6
+  },
+  {
+    "id": "ec95ded5-4106-4ae9-9cda-8eb8ea888f24",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p1",
+    "metricName": "hip_rotation",
+    "idealMin": 0,
+    "idealMax": 8
+  },
+  {
+    "id": "2deece17-b52e-4dc2-8f73-ff7f8483b806",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p1",
+    "metricName": "hip_rotation",
+    "idealMin": 0.0,
+    "idealMax": 5.6
+  },
+  {
+    "id": "0e3ecdf1-d1ac-4bfc-81c7-43c83e4f4bc0",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p1",
+    "metricName": "hip_rotation",
+    "idealMin": 0,
+    "idealMax": 8
+  },
+  {
+    "id": "db7b45bc-2f18-4586-a9b6-09dc6a29f0b2",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p1",
+    "metricName": "hip_rotation",
+    "idealMin": 0.0,
+    "idealMax": 5.6
+  },
+  {
+    "id": "50c32ab7-af82-4ddd-a5a2-ef1711471258",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p1",
+    "metricName": "spine_angle",
+    "idealMin": 30,
+    "idealMax": 40
+  },
+  {
+    "id": "d59b586d-0f68-445d-a55b-addaf8822d1f",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p1",
+    "metricName": "spine_angle",
+    "idealMin": 21.0,
+    "idealMax": 28.0
+  },
+  {
+    "id": "9b0d9503-cf77-4b9b-98ee-79589e7522ee",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p1",
+    "metricName": "spine_angle",
+    "idealMin": 30,
+    "idealMax": 40
+  },
+  {
+    "id": "538383d3-e558-4d92-8936-26eb9cac3c27",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p1",
+    "metricName": "spine_angle",
+    "idealMin": 21.0,
+    "idealMax": 28.0
+  },
+  {
+    "id": "ee9e1df0-c919-4b19-93c8-500add1370b5",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p2",
+    "metricName": "shoulder_rotation",
+    "idealMin": 15,
+    "idealMax": 25
+  },
+  {
+    "id": "f35897d9-31a2-431d-b95e-2df9b8cbcd30",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p2",
+    "metricName": "shoulder_rotation",
+    "idealMin": 10.5,
+    "idealMax": 17.5
+  },
+  {
+    "id": "8a80c8e4-8a9e-4044-bc0b-2cf0f2f01ff3",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p2",
+    "metricName": "shoulder_rotation",
+    "idealMin": 8.2,
+    "idealMax": 13.8
+  },
+  {
+    "id": "77b0fee2-caa5-440f-ac58-6bf910d7386d",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p2",
+    "metricName": "shoulder_rotation",
+    "idealMin": 5.7,
+    "idealMax": 9.7
+  },
+  {
+    "id": "3bd462a2-2e09-43c0-8db7-19f9a9dbf0e1",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p2",
+    "metricName": "hip_rotation",
+    "idealMin": 5,
+    "idealMax": 15
+  },
+  {
+    "id": "6c5705a7-9a9f-463c-a870-2b9ef4d52782",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p2",
+    "metricName": "hip_rotation",
+    "idealMin": 3.5,
+    "idealMax": 10.5
+  },
+  {
+    "id": "09d11190-2844-4df0-86c7-e111ef059f7a",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p2",
+    "metricName": "hip_rotation",
+    "idealMin": 2.8,
+    "idealMax": 8.2
+  },
+  {
+    "id": "a2007bb5-b80c-4938-a478-b00213456771",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p2",
+    "metricName": "hip_rotation",
+    "idealMin": 2.0,
+    "idealMax": 5.7
+  },
+  {
+    "id": "868a125a-ae0f-44c2-9bb3-f73fcdbb8740",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p2",
+    "metricName": "spine_angle",
+    "idealMin": 30,
+    "idealMax": 42
+  },
+  {
+    "id": "9e778b26-0dac-437b-b681-3bac2b297cd5",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p2",
+    "metricName": "spine_angle",
+    "idealMin": 21.0,
+    "idealMax": 29.4
+  },
+  {
+    "id": "d884c0c4-6f8c-4681-b3d8-a8b3c8a31d40",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p2",
+    "metricName": "spine_angle",
+    "idealMin": 16.5,
+    "idealMax": 23.1
+  },
+  {
+    "id": "3d54baf5-78b1-4863-8b6d-4177b5f33053",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p2",
+    "metricName": "spine_angle",
+    "idealMin": 11.5,
+    "idealMax": 16.2
+  },
+  {
+    "id": "36903e63-d301-44f9-832c-1315972256a4",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p3",
+    "metricName": "shoulder_rotation",
+    "idealMin": 40,
+    "idealMax": 55
+  },
+  {
+    "id": "e5c51a07-b7e4-4ee1-9a3b-b301b65f2fd7",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p3",
+    "metricName": "shoulder_rotation",
+    "idealMin": 28.0,
+    "idealMax": 38.5
+  },
+  {
+    "id": "9b7de1ad-9ed3-4184-aa48-89656973b205",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p3",
+    "metricName": "shoulder_rotation",
+    "idealMin": 22.0,
+    "idealMax": 30.3
+  },
+  {
+    "id": "051f11be-10b9-47d2-9cda-80e301aa4d01",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p3",
+    "metricName": "shoulder_rotation",
+    "idealMin": 15.4,
+    "idealMax": 21.2
+  },
+  {
+    "id": "9c6571e6-debd-4a80-bcb9-6f3dfbe0ea98",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p3",
+    "metricName": "hip_rotation",
+    "idealMin": 15,
+    "idealMax": 25
+  },
+  {
+    "id": "db3066e9-e98e-419a-8c9a-ac32e372b21f",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p3",
+    "metricName": "hip_rotation",
+    "idealMin": 10.5,
+    "idealMax": 17.5
+  },
+  {
+    "id": "171b131b-33aa-4f99-a807-fce9653d02d3",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p3",
+    "metricName": "hip_rotation",
+    "idealMin": 8.2,
+    "idealMax": 13.8
+  },
+  {
+    "id": "c093d020-9ec3-4a27-8c39-99040dd8402d",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p3",
+    "metricName": "hip_rotation",
+    "idealMin": 5.7,
+    "idealMax": 9.7
+  },
+  {
+    "id": "82b5d308-beb0-4013-b977-9a67b6d79e47",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p3",
+    "metricName": "spine_angle",
+    "idealMin": 30,
+    "idealMax": 42
+  },
+  {
+    "id": "264a1c64-b910-48d4-8fe1-31ce0e6e14cb",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p3",
+    "metricName": "spine_angle",
+    "idealMin": 21.0,
+    "idealMax": 29.4
+  },
+  {
+    "id": "4e67af2c-08b2-40a9-b030-41e41466a6a6",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p3",
+    "metricName": "spine_angle",
+    "idealMin": 16.5,
+    "idealMax": 23.1
+  },
+  {
+    "id": "c8b303e6-4c21-4f91-b08e-d0c1a72c1479",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p3",
+    "metricName": "spine_angle",
+    "idealMin": 11.5,
+    "idealMax": 16.2
+  },
+  {
+    "id": "3503d691-bf70-4de4-8292-0da78d926811",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p4",
+    "metricName": "shoulder_rotation",
+    "idealMin": 80,
+    "idealMax": 95
+  },
+  {
+    "id": "f748f679-635b-4514-bb3d-23036b54bfa8",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p4",
+    "metricName": "shoulder_rotation",
+    "idealMin": 56.0,
+    "idealMax": 66.5
+  },
+  {
+    "id": "055bd0fe-6220-4b14-ad08-919646592c22",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p4",
+    "metricName": "shoulder_rotation",
+    "idealMin": 44.0,
+    "idealMax": 52.3
+  },
+  {
+    "id": "3f77f3fa-466e-4c0d-9e04-8e7217676c1f",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p4",
+    "metricName": "shoulder_rotation",
+    "idealMin": 30.8,
+    "idealMax": 36.6
+  },
+  {
+    "id": "eb9a2159-a15a-4bbf-b1ce-057f1f184592",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p4",
+    "metricName": "hip_rotation",
+    "idealMin": 35,
+    "idealMax": 50
+  },
+  {
+    "id": "49716116-8412-40b8-bd3e-0d65036de1d9",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p4",
+    "metricName": "hip_rotation",
+    "idealMin": 24.5,
+    "idealMax": 35.0
+  },
+  {
+    "id": "a23160b6-4705-44a5-ad1a-213acc979524",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p4",
+    "metricName": "hip_rotation",
+    "idealMin": 19.2,
+    "idealMax": 27.5
+  },
+  {
+    "id": "4e0c26fe-e174-41b7-a47a-5128e35bc813",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p4",
+    "metricName": "hip_rotation",
+    "idealMin": 13.4,
+    "idealMax": 19.2
+  },
+  {
+    "id": "6b181083-bf89-476a-bd4f-13917565a105",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p4",
+    "metricName": "spine_angle",
+    "idealMin": 28,
+    "idealMax": 40
+  },
+  {
+    "id": "e3a1914f-8fc5-4e05-ac98-660ccd3582fa",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p4",
+    "metricName": "spine_angle",
+    "idealMin": 19.6,
+    "idealMax": 28.0
+  },
+  {
+    "id": "d653fb03-7af6-4564-96c9-88495139a5d2",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p4",
+    "metricName": "spine_angle",
+    "idealMin": 15.4,
+    "idealMax": 22.0
+  },
+  {
+    "id": "fb795ec1-b515-4218-9014-b5eff60637c3",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p4",
+    "metricName": "spine_angle",
+    "idealMin": 10.8,
+    "idealMax": 15.4
+  },
+  {
+    "id": "762f83b5-36ed-4747-ad86-d71ce0335923",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p5",
+    "metricName": "shoulder_rotation",
+    "idealMin": 60,
+    "idealMax": 80
+  },
+  {
+    "id": "2606fa1f-d7e1-4260-953f-81754b08d5bf",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p5",
+    "metricName": "shoulder_rotation",
+    "idealMin": 42.0,
+    "idealMax": 56.0
+  },
+  {
+    "id": "3a354238-0c43-4745-84ca-5fa967d90841",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p5",
+    "metricName": "shoulder_rotation",
+    "idealMin": 33.0,
+    "idealMax": 44.0
+  },
+  {
+    "id": "a4ec73c8-03b0-4a32-a249-3763175c4227",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p5",
+    "metricName": "shoulder_rotation",
+    "idealMin": 23.1,
+    "idealMax": 30.8
+  },
+  {
+    "id": "ed7a7c76-eaf4-4bdf-a143-5f3d23063806",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p5",
+    "metricName": "hip_rotation",
+    "idealMin": 40,
+    "idealMax": 55
+  },
+  {
+    "id": "8e3fa03c-3d14-4806-921e-cbb6468279b3",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p5",
+    "metricName": "hip_rotation",
+    "idealMin": 28.0,
+    "idealMax": 38.5
+  },
+  {
+    "id": "84b5037b-0211-43b5-a39b-c554418232ba",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p5",
+    "metricName": "hip_rotation",
+    "idealMin": 22.0,
+    "idealMax": 30.3
+  },
+  {
+    "id": "3800b4e8-1cb2-4d2e-bf14-2732289c0925",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p5",
+    "metricName": "hip_rotation",
+    "idealMin": 15.4,
+    "idealMax": 21.2
+  },
+  {
+    "id": "33575727-0404-4b2b-81d2-323200657642",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p5",
+    "metricName": "spine_angle",
+    "idealMin": 28,
+    "idealMax": 40
+  },
+  {
+    "id": "bc97afed-b3da-4893-a04a-31f23730afa1",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p5",
+    "metricName": "spine_angle",
+    "idealMin": 19.6,
+    "idealMax": 28.0
+  },
+  {
+    "id": "356a57f8-d725-420e-bef7-b527d8813757",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p5",
+    "metricName": "spine_angle",
+    "idealMin": 15.4,
+    "idealMax": 22.0
+  },
+  {
+    "id": "0ba0d4c9-85d5-4fde-b83e-fed0e2af5bff",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p5",
+    "metricName": "spine_angle",
+    "idealMin": 10.8,
+    "idealMax": 15.4
+  },
+  {
+    "id": "060a9bc6-b571-4588-81ab-c73731a2101c",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p6",
+    "metricName": "shoulder_rotation",
+    "idealMin": 30,
+    "idealMax": 50
+  },
+  {
+    "id": "463ac0fe-17a5-4474-a07a-c7a6fd75ccf0",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p6",
+    "metricName": "shoulder_rotation",
+    "idealMin": 21.0,
+    "idealMax": 35.0
+  },
+  {
+    "id": "65ebacf6-6230-45d1-9cf5-50db71f64105",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p6",
+    "metricName": "shoulder_rotation",
+    "idealMin": 16.5,
+    "idealMax": 27.5
+  },
+  {
+    "id": "9be9ae96-976b-45fa-a353-bc3b6cf3b89b",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p6",
+    "metricName": "shoulder_rotation",
+    "idealMin": 11.5,
+    "idealMax": 19.2
+  },
+  {
+    "id": "12b6158b-c124-44fe-aefa-9d7a1766793b",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p6",
+    "metricName": "hip_rotation",
+    "idealMin": 30,
+    "idealMax": 45
+  },
+  {
+    "id": "925e96bd-6ed5-43a6-a431-b9244388076c",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p6",
+    "metricName": "hip_rotation",
+    "idealMin": 21.0,
+    "idealMax": 31.5
+  },
+  {
+    "id": "1ea08c90-5047-4bca-99fd-99be0ab8a0f9",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p6",
+    "metricName": "hip_rotation",
+    "idealMin": 16.5,
+    "idealMax": 24.8
+  },
+  {
+    "id": "75a3496c-fba4-47d0-b7dd-5010f8f68dca",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p6",
+    "metricName": "hip_rotation",
+    "idealMin": 11.5,
+    "idealMax": 17.4
+  },
+  {
+    "id": "50ba8743-0ca8-4076-84e2-2ca52d5f47e9",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p6",
+    "metricName": "spine_angle",
+    "idealMin": 28,
+    "idealMax": 40
+  },
+  {
+    "id": "26f3b5c2-ef40-496e-b41e-9258c862c36f",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p6",
+    "metricName": "spine_angle",
+    "idealMin": 19.6,
+    "idealMax": 28.0
+  },
+  {
+    "id": "8e61458c-4c2e-4256-8465-51003316d433",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p6",
+    "metricName": "spine_angle",
+    "idealMin": 15.4,
+    "idealMax": 22.0
+  },
+  {
+    "id": "e59f9648-1b57-4e83-8cae-e9664c62218b",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p6",
+    "metricName": "spine_angle",
+    "idealMin": 10.8,
+    "idealMax": 15.4
+  },
+  {
+    "id": "cbcb9844-354b-4fea-980f-94ac5eb26a89",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p7",
+    "metricName": "shoulder_rotation",
+    "idealMin": 5,
+    "idealMax": 15
+  },
+  {
+    "id": "884feb94-4455-438a-a94c-42c48b91f3b1",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p7",
+    "metricName": "shoulder_rotation",
+    "idealMin": 3.5,
+    "idealMax": 10.5
+  },
+  {
+    "id": "658fe1ce-9c59-4c3c-9b24-a36d9d8ec120",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p7",
+    "metricName": "shoulder_rotation",
+    "idealMin": 2.8,
+    "idealMax": 8.2
+  },
+  {
+    "id": "dfb0ca5a-6176-4293-b5a4-7e55d2f4b185",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p7",
+    "metricName": "shoulder_rotation",
+    "idealMin": 2.0,
+    "idealMax": 5.7
+  },
+  {
+    "id": "8d0d7d44-5563-472b-aae1-4a98fa83cef3",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p7",
+    "metricName": "hip_rotation",
+    "idealMin": 35,
+    "idealMax": 45
+  },
+  {
+    "id": "085a890a-9d83-4f1d-b5c0-83008dae819c",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p7",
+    "metricName": "hip_rotation",
+    "idealMin": 24.5,
+    "idealMax": 31.5
+  },
+  {
+    "id": "35f30f80-4634-432b-92a0-ee321aa26250",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p7",
+    "metricName": "hip_rotation",
+    "idealMin": 19.2,
+    "idealMax": 24.8
+  },
+  {
+    "id": "b5109f15-3ada-4acd-88e2-c86699744dd5",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p7",
+    "metricName": "hip_rotation",
+    "idealMin": 13.4,
+    "idealMax": 17.4
+  },
+  {
+    "id": "5aa0458e-8dd7-4499-a8d8-435d8155ab17",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p7",
+    "metricName": "spine_angle",
+    "idealMin": 28,
+    "idealMax": 40
+  },
+  {
+    "id": "01a14d55-8773-45f4-a50c-884757b56ee2",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p7",
+    "metricName": "spine_angle",
+    "idealMin": 19.6,
+    "idealMax": 28.0
+  },
+  {
+    "id": "e0493dc8-7472-4e50-89ba-1ea3b34e7b7b",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p7",
+    "metricName": "spine_angle",
+    "idealMin": 15.4,
+    "idealMax": 22.0
+  },
+  {
+    "id": "1349871b-33f5-4187-a192-f6d91a5b8c5a",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p7",
+    "metricName": "spine_angle",
+    "idealMin": 10.8,
+    "idealMax": 15.4
+  },
+  {
+    "id": "d7524df8-868f-4fc0-8742-418c54713ac5",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p8",
+    "metricName": "shoulder_rotation",
+    "idealMin": 15,
+    "idealMax": 30
+  },
+  {
+    "id": "d895ae16-131f-481b-8235-79bf8682959d",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p8",
+    "metricName": "shoulder_rotation",
+    "idealMin": 10.5,
+    "idealMax": 21.0
+  },
+  {
+    "id": "b0ddea3b-c620-4a79-898e-e918185490b8",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p8",
+    "metricName": "shoulder_rotation",
+    "idealMin": 8.2,
+    "idealMax": 16.5
+  },
+  {
+    "id": "e43c737b-cb32-4e32-9e9f-390c59b38525",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p8",
+    "metricName": "shoulder_rotation",
+    "idealMin": 5.7,
+    "idealMax": 11.5
+  },
+  {
+    "id": "d2fc45af-449f-4e26-adff-6be576ded901",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p8",
+    "metricName": "hip_rotation",
+    "idealMin": 45,
+    "idealMax": 60
+  },
+  {
+    "id": "cbf2baf8-0c51-4335-918f-7dc51f6090f3",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p8",
+    "metricName": "hip_rotation",
+    "idealMin": 31.5,
+    "idealMax": 42.0
+  },
+  {
+    "id": "adcee723-ffeb-441b-876a-1f8ea727200c",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p8",
+    "metricName": "hip_rotation",
+    "idealMin": 24.8,
+    "idealMax": 33.0
+  },
+  {
+    "id": "8d973bf0-d534-4c38-bbed-6e2ff1dd9534",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p8",
+    "metricName": "hip_rotation",
+    "idealMin": 17.4,
+    "idealMax": 23.1
+  },
+  {
+    "id": "a344feac-5b45-4be4-b275-874d33157ba9",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p8",
+    "metricName": "spine_angle",
+    "idealMin": 26,
+    "idealMax": 38
+  },
+  {
+    "id": "1701d885-20ed-4d5b-81c2-02efe93c354d",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p8",
+    "metricName": "spine_angle",
+    "idealMin": 18.2,
+    "idealMax": 26.6
+  },
+  {
+    "id": "fbfbadef-7176-43ac-a06b-d4f53ebf4937",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p8",
+    "metricName": "spine_angle",
+    "idealMin": 14.3,
+    "idealMax": 20.9
+  },
+  {
+    "id": "ebbf57d8-c4eb-423e-b572-6af0039737c7",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p8",
+    "metricName": "spine_angle",
+    "idealMin": 10.0,
+    "idealMax": 14.6
+  },
+  {
+    "id": "d59c73d6-60a3-4bf0-a077-8aa16d165bfc",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p9",
+    "metricName": "shoulder_rotation",
+    "idealMin": 45,
+    "idealMax": 65
+  },
+  {
+    "id": "f05b7bdf-b906-47da-bd53-8b2bcd20c071",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p9",
+    "metricName": "shoulder_rotation",
+    "idealMin": 31.5,
+    "idealMax": 45.5
+  },
+  {
+    "id": "05ba6726-0e4c-4690-860d-be52ed8fd95c",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p9",
+    "metricName": "shoulder_rotation",
+    "idealMin": 24.8,
+    "idealMax": 35.8
+  },
+  {
+    "id": "20511628-fe6a-40b4-8250-967d6053e1c0",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p9",
+    "metricName": "shoulder_rotation",
+    "idealMin": 17.4,
+    "idealMax": 25.1
+  },
+  {
+    "id": "eb8a4e4a-fe68-474a-8a44-f001d678b8bb",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p9",
+    "metricName": "hip_rotation",
+    "idealMin": 60,
+    "idealMax": 80
+  },
+  {
+    "id": "088bf74c-f2ab-4696-893f-d9fd2311bc22",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p9",
+    "metricName": "hip_rotation",
+    "idealMin": 42.0,
+    "idealMax": 56.0
+  },
+  {
+    "id": "197ddd8f-5960-42bb-9807-ad4af0547694",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p9",
+    "metricName": "hip_rotation",
+    "idealMin": 33.0,
+    "idealMax": 44.0
+  },
+  {
+    "id": "927f4e5a-ff2d-45ab-bdd4-e7e3c7eef371",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p9",
+    "metricName": "hip_rotation",
+    "idealMin": 23.1,
+    "idealMax": 30.8
+  },
+  {
+    "id": "bd6688da-140e-4db1-86aa-8ed3a52c86da",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p9",
+    "metricName": "spine_angle",
+    "idealMin": 20,
+    "idealMax": 32
+  },
+  {
+    "id": "7ad98528-1bad-4747-8a54-970c247753fe",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p9",
+    "metricName": "spine_angle",
+    "idealMin": 14.0,
+    "idealMax": 22.4
+  },
+  {
+    "id": "2cb63568-5d0e-418f-9db1-f2a83885d2f0",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p9",
+    "metricName": "spine_angle",
+    "idealMin": 11.0,
+    "idealMax": 17.6
+  },
+  {
+    "id": "0a873a24-5f82-4d93-8d03-d98250ff12f5",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p9",
+    "metricName": "spine_angle",
+    "idealMin": 7.7,
+    "idealMax": 12.3
+  },
+  {
+    "id": "d74a5517-8a73-47cb-bb3f-69c34a02505d",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p10",
+    "metricName": "shoulder_rotation",
+    "idealMin": 85,
+    "idealMax": 100
+  },
+  {
+    "id": "85a379cc-89b2-4832-bce5-3ba6085a540e",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p10",
+    "metricName": "shoulder_rotation",
+    "idealMin": 59.5,
+    "idealMax": 70.0
+  },
+  {
+    "id": "02158c98-a7e3-4800-a123-e11fa9527c53",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p10",
+    "metricName": "shoulder_rotation",
+    "idealMin": 46.8,
+    "idealMax": 55.0
+  },
+  {
+    "id": "e25a0d7d-fe8d-41e6-9c4b-8f23c1196207",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p10",
+    "metricName": "shoulder_rotation",
+    "idealMin": 32.8,
+    "idealMax": 38.5
+  },
+  {
+    "id": "2575af47-941c-4940-9937-d4ac69291400",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p10",
+    "metricName": "hip_rotation",
+    "idealMin": 80,
+    "idealMax": 95
+  },
+  {
+    "id": "2b828a37-f52c-457b-8b15-68af7d8af106",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p10",
+    "metricName": "hip_rotation",
+    "idealMin": 56.0,
+    "idealMax": 66.5
+  },
+  {
+    "id": "5baf0bf1-905e-429c-ad3c-ed5e1e57a2f6",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p10",
+    "metricName": "hip_rotation",
+    "idealMin": 44.0,
+    "idealMax": 52.3
+  },
+  {
+    "id": "51db65d2-afc6-4313-93a5-a5f764300120",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p10",
+    "metricName": "hip_rotation",
+    "idealMin": 30.8,
+    "idealMax": 36.6
+  },
+  {
+    "id": "52e5921f-f204-422e-98d8-5c9edf19dd86",
+    "shotType": "full_swing",
+    "cameraView": "face_on",
+    "segmentType": "p10",
+    "metricName": "spine_angle",
+    "idealMin": 15,
+    "idealMax": 25
+  },
+  {
+    "id": "2f5f292d-5888-4a6e-8786-1a5d5a727cef",
+    "shotType": "full_swing",
+    "cameraView": "down_the_line",
+    "segmentType": "p10",
+    "metricName": "spine_angle",
+    "idealMin": 10.5,
+    "idealMax": 17.5
+  },
+  {
+    "id": "64684231-7e25-4da7-b92b-7a2d7fcd9a94",
+    "shotType": "approach",
+    "cameraView": "face_on",
+    "segmentType": "p10",
+    "metricName": "spine_angle",
+    "idealMin": 8.2,
+    "idealMax": 13.8
+  },
+  {
+    "id": "ecf74b54-5ce9-442e-8848-9101dbfdab40",
+    "shotType": "approach",
+    "cameraView": "down_the_line",
+    "segmentType": "p10",
+    "metricName": "spine_angle",
+    "idealMin": 5.7,
+    "idealMax": 9.7
+  }
+]

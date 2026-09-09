@@ -1,0 +1,29 @@
+# Xcode
+build/
+DerivedData/
+*.xcodeproj
+*.xcworkspace
+.swiftpm/
+*.xcuserstate
+xcuserdata/
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# XcodeGen output kept out of VCS; run `xcodegen generate` to recreate .xcodeproj
+!default.xcworkspace
+
+# CocoaPods / SPM caches (not used, kept for safety)
+Pods/
+.build/
+
+# macOS
+.DS_Store
+
+# Fastlane (if added later)
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output

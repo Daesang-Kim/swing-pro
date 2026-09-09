@@ -60,12 +60,12 @@ final class SwingAutoCaptureController: ObservableObject {
             self?.handleFrame(sampleBuffer, timestamp: timestamp)
         }
 
-        camera.recordingState
+        self.camera.recordingState
             .receive(on: DispatchQueue.main)
             .sink { [weak self] state in self?.recordingState = state }
             .store(in: &cancellables)
 
-        camera.savedClipURL
+        self.camera.savedClipURL
             .receive(on: DispatchQueue.main)
             .sink { [weak self] url in self?.handleRecordedClip(at: url) }
             .store(in: &cancellables)

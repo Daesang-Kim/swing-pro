@@ -26,6 +26,7 @@ struct ARPuttingContainerView: UIViewRepresentable {
         coordinator.viewModel.detach()
     }
 
+    @MainActor
     final class Coordinator: NSObject {
         let viewModel: PuttingMeasurementViewModel
 

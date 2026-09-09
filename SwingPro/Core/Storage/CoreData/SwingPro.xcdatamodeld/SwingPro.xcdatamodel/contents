@@ -19,7 +19,7 @@
         <attribute name="courseName" optional="YES" attributeType="String"/>
         <attribute name="startedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="endedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <relationship name="user" maxCount="1" deletionRule="Nullify" destinationEntity="CDUser" inverseName="sessions" inverseEntity="CDUser"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDUser" inverseName="sessions" inverseEntity="CDUser"/>
         <relationship name="clips" toMany="YES" deletionRule="Cascade" destinationEntity="CDSwingClip" inverseName="session" inverseEntity="CDSwingClip"/>
         <relationship name="puttingMeasurements" toMany="YES" deletionRule="Cascade" destinationEntity="CDPuttingMeasurement" inverseName="session" inverseEntity="CDPuttingMeasurement"/>
         <uniquenessConstraints>
@@ -38,7 +38,7 @@
         <attribute name="cameraView" optional="YES" attributeType="String"/>
         <attribute name="cameraViewSource" optional="YES" attributeType="String"/>
         <attribute name="score" optional="YES" attributeType="Integer 16" usesScalarValueType="NO"/>
-        <relationship name="session" maxCount="1" deletionRule="Nullify" destinationEntity="CDSession" inverseName="clips" inverseEntity="CDSession"/>
+        <relationship name="session" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDSession" inverseName="clips" inverseEntity="CDSession"/>
         <relationship name="poseSegments" toMany="YES" deletionRule="Cascade" destinationEntity="CDPoseSegment" inverseName="clip" inverseEntity="CDPoseSegment"/>
         <relationship name="feedbacks" toMany="YES" deletionRule="Cascade" destinationEntity="CDSwingFeedback" inverseName="clip" inverseEntity="CDSwingFeedback"/>
         <relationship name="trajectory" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CDBallTrajectory" inverseName="clip" inverseEntity="CDBallTrajectory"/>
@@ -67,7 +67,7 @@
         <attribute name="segmentType" optional="YES" attributeType="String"/>
         <attribute name="timestampInVideo" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="angleSummaryJSON" optional="YES" attributeType="String"/>
-        <relationship name="clip" maxCount="1" deletionRule="Nullify" destinationEntity="CDSwingClip" inverseName="poseSegments" inverseEntity="CDSwingClip"/>
+        <relationship name="clip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDSwingClip" inverseName="poseSegments" inverseEntity="CDSwingClip"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="id"/>
@@ -79,7 +79,7 @@
         <attribute name="deviationItem" optional="YES" attributeType="String"/>
         <attribute name="message" optional="YES" attributeType="String"/>
         <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <relationship name="clip" maxCount="1" deletionRule="Nullify" destinationEntity="CDSwingClip" inverseName="feedbacks" inverseEntity="CDSwingClip"/>
+        <relationship name="clip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDSwingClip" inverseName="feedbacks" inverseEntity="CDSwingClip"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="id"/>
@@ -90,7 +90,7 @@
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="measuredAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="distanceM" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="session" maxCount="1" deletionRule="Nullify" destinationEntity="CDSession" inverseName="puttingMeasurements" inverseEntity="CDSession"/>
+        <relationship name="session" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDSession" inverseName="puttingMeasurements" inverseEntity="CDSession"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="id"/>
@@ -101,7 +101,7 @@
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="detectedPointsJSON" optional="YES" attributeType="String"/>
         <attribute name="detectionEndPointJSON" optional="YES" attributeType="String"/>
-        <relationship name="clip" maxCount="1" deletionRule="Nullify" destinationEntity="CDSwingClip" inverseName="trajectory" inverseEntity="CDSwingClip"/>
+        <relationship name="clip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDSwingClip" inverseName="trajectory" inverseEntity="CDSwingClip"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="id"/>

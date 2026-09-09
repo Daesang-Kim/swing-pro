@@ -76,7 +76,7 @@ final class SwingPhaseDetector {
         guard recentWristHeights.count >= 2,
               let oldest = recentWristHeights.first else { return [] }
 
-        let spread = recentWristHeights.map(\.height).max()! - recentWristHeights.map(\.height).min()!
+        let spread = recentWristHeights.map { $0.height }.max()! - recentWristHeights.map { $0.height }.min()!
         guard spread <= addressStabilityThreshold,
               timestamp - oldest.timestamp >= addressStabilityWindow else { return [] }
 
@@ -128,7 +128,7 @@ final class SwingPhaseDetector {
         guard addressHeight - wristHeight > addressStabilityThreshold * 2,
               recentWristHeights.count >= 2 else { return [] }
 
-        let spread = recentWristHeights.map(\.height).max()! - recentWristHeights.map(\.height).min()!
+        let spread = recentWristHeights.map { $0.height }.max()! - recentWristHeights.map { $0.height }.min()!
         guard spread <= addressStabilityThreshold else { return [] }
 
         state = .idle

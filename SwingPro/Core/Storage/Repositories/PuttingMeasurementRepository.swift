@@ -28,7 +28,7 @@ final class PuttingMeasurementRepository {
     func fetchMeasurements(sessionId: String) throws -> [PuttingMeasurement] {
         let fetch = CDPuttingMeasurement.fetchRequest()
         fetch.predicate = NSPredicate(format: "session.id == %@", sessionId)
-        fetch.sortDescriptors = [NSSortDescriptor(keyPath: \CDPuttingMeasurement.measuredAt, ascending: false)]
+        fetch.sortDescriptors = [NSSortDescriptor(key: "measuredAt", ascending: false)]
         return try context.fetch(fetch).map { $0.toDomain(sessionId: sessionId) }
     }
 }

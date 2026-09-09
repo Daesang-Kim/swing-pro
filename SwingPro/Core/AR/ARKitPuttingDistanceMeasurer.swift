@@ -25,17 +25,10 @@ final class ARKitPuttingDistanceMeasurer: NSObject, PuttingDistanceMeasuring {
     }
 
     func worldPosition(forScreenPoint point: CGPoint) throws -> SIMD3<Float> {
-        if #available(iOS 14.0, *) {
-            let results = arView.raycastQuery(from: point, allowing: .estimatedPlane, alignment: .horizontal)
-                .flatMap { arView.session.raycast($0) } ?? []
-            guard let result = results.first else { throw PuttingMeasurementError.hitTestFailed }
-            let column = result.worldTransform.columns.3
-            return SIMD3<Float>(column.x, column.y, column.z)
-        } else {
-            let results = arView.hitTest(point, types: [.existingPlaneUsingExtent, .estimatedHorizontalPlane])
-            guard let result = results.first else { throw PuttingMeasurementError.hitTestFailed }
-            let column = result.worldTransform.columns.3
-            return SIMD3<Float>(column.x, column.y, column.z)
-        }
+        let results = arView.raycastQuery(from: point, allowing: .estimatedPlane, alignment: .horizontal)
+            .map { arView.session.raycast($0) } ?? []
+        guard let result = results.first else { throw PuttingMeasurementError.hitTestFailed }
+        let column = result.worldTransform.columns.3
+        return SIMD3<Float>(column.x, column.y, column.z)
     }
 }

@@ -38,7 +38,7 @@ final class SessionRepository {
     func fetchSessions(for userId: String) throws -> [SwingSession] {
         let fetch = CDSession.fetchRequest()
         fetch.predicate = NSPredicate(format: "user.id == %@", userId)
-        fetch.sortDescriptors = [NSSortDescriptor(keyPath: \CDSession.startedAt, ascending: false)]
+        fetch.sortDescriptors = [NSSortDescriptor(key: "startedAt", ascending: false)]
         return try context.fetch(fetch).map { $0.toDomain() }
     }
 }

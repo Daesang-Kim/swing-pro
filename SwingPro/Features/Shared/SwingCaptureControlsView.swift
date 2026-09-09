@@ -21,7 +21,7 @@ struct SwingCaptureControlsView: View {
                     Text("다운더라인").tag(CameraView.downTheLine)
                 }
                 .pickerStyle(.segmented)
-                .onChange(of: controller.cameraView) { _, _ in
+                .onChange(of: controller.cameraView) { _ in
                     controller.cameraViewSource = .manual
                 }
             } else {

@@ -25,7 +25,8 @@ final class VisionPoseEstimator: PoseEstimating {
             return nil
         }
 
-        guard let observation = request.results?.first else { return nil }
+        guard let observations = request.results as? [VNHumanBodyPoseObservation],
+              let observation = observations.first else { return nil }
 
         var joints: [JointKey: CGPoint] = [:]
         var confidences: [JointKey: Float] = [:]

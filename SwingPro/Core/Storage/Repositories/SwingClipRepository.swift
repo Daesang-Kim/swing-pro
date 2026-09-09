@@ -89,7 +89,7 @@ final class SwingClipRepository {
         if let sessionId {
             fetch.predicate = NSPredicate(format: "session.id == %@", sessionId)
         }
-        fetch.sortDescriptors = [NSSortDescriptor(keyPath: \CDSwingClip.recordedAt, ascending: false)]
+        fetch.sortDescriptors = [NSSortDescriptor(key: "recordedAt", ascending: false)]
         return try context.fetch(fetch).map { try $0.toDomain(decoder: decoder) }
     }
 

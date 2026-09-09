@@ -30,6 +30,14 @@ final class PreRollRingBuffer {
         return drained
     }
 
+    /// 버퍼를 비우지 않고 가장 오래된(=가장 먼저 기록될) 프레임만 확인한다.
+    /// AVAssetWriter 설정(해상도/포맷)을 드레인 전에 미리 구성할 때 사용.
+    func peekOldest() -> CMSampleBuffer? {
+        lock.lock()
+        defer { lock.unlock() }
+        return buffer.first
+    }
+
     func clear() {
         lock.lock()
         defer { lock.unlock() }

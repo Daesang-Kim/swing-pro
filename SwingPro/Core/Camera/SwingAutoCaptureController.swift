@@ -156,11 +156,12 @@ final class SwingAutoCaptureController: ObservableObject {
 
     private func persistClip(at fileURL: URL, segments: [PoseSegment]) async {
         do {
+            let durationSec = (try? await AVURLAsset(url: fileURL).load(.duration).seconds) ?? 0
             let assetIdentifier = try await photoLibraryStore.saveVideo(at: fileURL)
             let clip = try clipRepository.createClip(
                 sessionId: sessionId,
                 videoAssetIdentifier: assetIdentifier,
-                durationSec: 0,
+                durationSec: durationSec,
                 shotType: shotType,
                 cameraView: cameraView,
                 cameraViewSource: cameraViewSource

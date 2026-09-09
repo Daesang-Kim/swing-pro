@@ -73,15 +73,30 @@ project.yml            XcodeGen 프로젝트 정의
 ## 현재 구현 상태
 
 로컬 DB 스키마, 도메인 모델, 화면 흐름, 그리고 분석 로직(점수화·피드백·구간 판별·궤적 외삽 등 순수
-Swift 알고리즘)은 실제로 동작하도록 작성되어 있고 유닛 테스트로 검증한다. 다만 아래 항목들은
-**실기기·Xcode 환경에서만 구현·검증이 가능해 스켈레톤(TODO)으로 남겨두었다**:
+Swift 알고리즘)은 실제로 동작하도록 작성되어 있고 유닛 테스트로 검증한다.
 
-- `AVFoundationCameraSession`: 실제 `AVAssetWriter`를 이용한 프리롤 버퍼 + 스윙 구간 파일 기록
+`AVFoundationCameraSession`은 `AVAssetWriter` 기반 실제 녹화 파이프라인이 구현되어 있다:
+비디오+오디오를 각각 프리롤 순환 버퍼(기본 2초)에 담아두다가 스윙 시작 시 그 버퍼를 먼저
+파일에 흘려보내고, 이후 실시간 프레임을 이어서 기록 → 스윙 종료 후 `postRollDuration`만큼
+더 기록하고 마무리해 임시 `.mov` 파일 URL을 방출한다. 아직 다듬어지지 않은 부분:
+- 카메라/마이크 권한을 명시적으로 요청(`AVCaptureDevice.requestAccess`)하지 않음 — 거부 시
+  UX 처리 없음
+- 세로 모드로 고정 녹화(`videoOrientation = .portrait`)만 지원, 기기 회전 대응 없음
+- 프리롤 버퍼가 비어있는(스윙이 앱 실행 직후 2초 내에 감지된) 극단적 케이스는 녹화를 시작하지
+  않고 조용히 무시
+
+아래 항목들은 **실기기·Xcode 환경에서만 구현·검증이 가능해 스켈레톤(TODO)으로 남겨두었다**:
+
 - `VisionBallTrajectoryTracker`: 프레임 차분 기반 공 탐지 알고리즘
 - `SwingPhaseDetector`의 임계값: 손목 높이 기반 P1~P10 판별 규칙은 베이스라인 로직이며,
   실기기 촬영 데이터로 튜닝이 필요
 - `swing_reference_ranges.json`: 체크포인트별 이상적 각도 범위는 초기 추정치(seed data)이며
   전문가 자문/모션캡처 데이터로 보정 필요
+- `AVFoundationCameraSession`의 카메라 프레임 콜백이 백그라운드 큐(`dataOutputQueue`)에서
+  도는데, `onFrame` 클로저를 거쳐 `@MainActor`인 `SwingAutoCaptureController.handleFrame`을
+  직접 호출한다. 클로저 타입이 액터 정보를 지워버려 컴파일은 통과하지만, 실기기에서 카메라를
+  켜면 SwiftUI가 "Publishing changes from background threads" 경고를 낼 수 있음 — 다음으로
+  손볼 항목
 
 `swing_reference_ranges` 테이블은 Core Data 모델에도 정의해 두었지만(요구사양 6장과의 스키마
 일치), 실제 런타임 조회는 앱 번들에 포함된 `swing_reference_ranges.json` 시드 데이터를 사용한다

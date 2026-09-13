@@ -158,14 +158,33 @@ final class AVFoundationCameraSession: NSObject, CameraCapturing {
         audioWriterInput = audioInput
         outputURL = url
 
+        // 프리롤 버퍼(약 2초, 수십 장)를 한꺼번에 밀어넣는 구간. 인코더가 그 순간 바로 다
+        // 받아줄 준비가 안 되어 있을 수 있어(isReadyForMoreMediaData == false), 실시간 프레임과
+        // 달리 여기서는 준비될 때까지 짧게 기다렸다가 append한다 — 그냥 넘기면 프리롤 구간에
+        // 프레임이 누락되어 영상 초반에 끊김이 생긴다.
         for sample in videoPreRollBuffer.drain() {
-            appendVideo(sample)
+            appendWaitingForReadiness(sample, to: videoInput)
         }
-        for sample in audioPreRollBuffer.drain() {
-            appendAudio(sample)
+        if let audioInput {
+            for sample in audioPreRollBuffer.drain() {
+                appendWaitingForReadiness(sample, to: audioInput)
+            }
         }
 
         recordingStateSubject.send(.recording)
+    }
+
+    /// 인코더가 받을 준비가 될 때까지(최대 약 1초) 짧게 기다렸다가 append한다.
+    /// 프리롤 버퍼를 한꺼번에 드레인할 때만 사용 — 실시간 프레임 경로는 그냥 스킵하는 게 맞다
+    /// (매 프레임 대기하면 큐가 밀려 오히려 더 큰 지연/드롭을 유발한다).
+    private func appendWaitingForReadiness(_ sample: CMSampleBuffer, to input: AVAssetWriterInput) {
+        var attempts = 0
+        while !input.isReadyForMoreMediaData, attempts < 200 {
+            Thread.sleep(forTimeInterval: 0.005)
+            attempts += 1
+        }
+        guard input.isReadyForMoreMediaData else { return }
+        input.append(sample)
     }
 
     private func scheduleFinish(after postRollDuration: TimeInterval) {

@@ -86,6 +86,10 @@ final class SwingAutoCaptureController: ObservableObject {
     }
 
     private func handleFrame(_ sampleBuffer: CMSampleBuffer, timestamp: TimeInterval) {
+        // 이미 녹화/포스트롤 중이면 새 스윙 감지를 멈춘다. 그렇지 않으면 포스트롤 도중 골퍼의
+        // 움직임(공을 줍거나 자세를 다시 잡는 등)이 두 번째 스윙으로 오인식되어, 아직 첫 클립을
+        // 쓰고 있는 AVAssetWriter에 begin이 씹히고 상태머신만 한 사이클 소비해버리는 문제가 있었다.
+        guard recordingState == .waiting else { return }
         guard let poseFrame = poseEstimator.estimatePose(in: sampleBuffer, timestamp: timestamp) else { return }
         let events = phaseDetector.ingest(poseFrame)
 

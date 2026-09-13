@@ -34,6 +34,11 @@ final class ClipDetailViewModel: ObservableObject {
         Task {
             if let url = try? await photoLibraryStore.videoURL(forAssetIdentifier: clip.videoPath) {
                 player = AVPlayer(url: url)
+                // 플레이어가 비동기로 늦게 준비되므로, 로드되자마자 이미 선택돼 있던
+                // 체크포인트(기본 P1)의 시점으로 바로 이동해 스틸컷을 보여준다.
+                if let checkpoint = selectedCheckpoint {
+                    selectCheckpoint(checkpoint)
+                }
             }
         }
     }

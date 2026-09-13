@@ -75,10 +75,16 @@ final class SwingAutoCaptureController: ObservableObject {
         self.sessionId = sessionId
     }
 
+    /// `.swingStarted`부터 `.swingFinished`까지 true. 진행 중인 스윙의 후속 체크포인트
+    /// (P4/P7/P10)는 카메라 녹화 상태와 무관하게 계속 감지해야 하므로, "새 스윙 재감지 방지"
+    /// 가드와 별도로 이 값으로 구분한다.
+    private var isSwingInProgress = false
+
     func start() {
         try? camera.startSession()
         phaseDetector.reset()
         collectedSegments.removeAll()
+        isSwingInProgress = false
     }
 
     func stop() {
@@ -86,16 +92,20 @@ final class SwingAutoCaptureController: ObservableObject {
     }
 
     private func handleFrame(_ sampleBuffer: CMSampleBuffer, timestamp: TimeInterval) {
-        // 이미 녹화/포스트롤 중이면 새 스윙 감지를 멈춘다. 그렇지 않으면 포스트롤 도중 골퍼의
-        // 움직임(공을 줍거나 자세를 다시 잡는 등)이 두 번째 스윙으로 오인식되어, 아직 첫 클립을
-        // 쓰고 있는 AVAssetWriter에 begin이 씹히고 상태머신만 한 사이클 소비해버리는 문제가 있었다.
-        guard recordingState == .waiting else { return }
+        // 진행 중인 스윙이 없는데 카메라가 아직 이전 클립을 정리하는 중(recording/finalizing)이면
+        // 새 스윙 감지를 미룬다 — 그렇지 않으면 포스트롤 도중 골퍼의 움직임(공을 줍거나 자세를
+        // 다시 잡는 등)이 두 번째 스윙으로 오인식되어, 아직 첫 클립을 쓰고 있는 AVAssetWriter에
+        // begin이 씹히고 상태머신만 한 사이클 소비해버리는 문제가 있었다. 반대로 이미 진행 중인
+        // 스윙(isSwingInProgress)은 recordingState와 무관하게 끝까지 계속 추적해야
+        // P4/P7/P10 체크포인트가 정상적으로 잡힌다.
+        guard isSwingInProgress || recordingState == .waiting else { return }
         guard let poseFrame = poseEstimator.estimatePose(in: sampleBuffer, timestamp: timestamp) else { return }
         let events = phaseDetector.ingest(poseFrame)
 
         for event in events {
             switch event {
             case .swingStarted(let ts):
+                isSwingInProgress = true
                 camera.beginSwingRecording(at: ts)
 
             case .checkpointReached(let checkpoint, let ts):
@@ -113,6 +123,7 @@ final class SwingAutoCaptureController: ObservableObject {
                 )
 
             case .swingFinished(let ts):
+                isSwingInProgress = false
                 camera.endSwingRecording(postRollDuration: 4.0)
                 _ = ts
             }
